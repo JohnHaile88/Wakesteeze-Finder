@@ -1,0 +1,763 @@
+{
+ "shop": "OWC Pro Shop",
+ "park": "OWC",
+ "supplier": "Hyperlite",
+ "accent": "",
+ "sample": true,
+ "items": [
+  {
+   "id": "b1",
+   "type": "board",
+   "brand": "Hyperlite",
+   "model": "Motive",
+   "size": "",
+   "price": "",
+   "stock": "in",
+   "skill": [
+    "new",
+    "basics"
+   ],
+   "terrain": [
+    "boat",
+    "cable"
+   ],
+   "style": [
+    "allround"
+   ],
+   "wmin": null,
+   "wmax": null,
+   "notes": "Easy, forgiving first board. Black/white with red stripe, comes as a package with bindings."
+  },
+  {
+   "id": "b2",
+   "type": "board",
+   "brand": "Hyperlite",
+   "model": "Motive",
+   "size": "",
+   "price": "",
+   "stock": "in",
+   "skill": [
+    "new",
+    "basics"
+   ],
+   "terrain": [
+    "boat",
+    "cable"
+   ],
+   "style": [
+    "allround"
+   ],
+   "wmin": null,
+   "wmax": null,
+   "notes": "Easy, forgiving first board. Black/white/blue colorway."
+  },
+  {
+   "id": "b3",
+   "type": "board",
+   "brand": "Hyperlite",
+   "model": "Frenzy",
+   "size": "",
+   "price": 449.99,
+   "stock": "in",
+   "skill": [
+    "basics",
+    "features",
+    "advanced"
+   ],
+   "terrain": [
+    "cable"
+   ],
+   "style": [
+    "park",
+    "allround"
+   ],
+   "wmin": null,
+   "wmax": null,
+   "notes": "Cable park board. Soft flex, presses and slides rails. Yellow."
+  },
+  {
+   "id": "b4",
+   "type": "board",
+   "brand": "Hyperlite",
+   "model": "Frenzy",
+   "size": "",
+   "price": 449.99,
+   "stock": "in",
+   "skill": [
+    "basics",
+    "features",
+    "advanced"
+   ],
+   "terrain": [
+    "cable"
+   ],
+   "style": [
+    "park",
+    "allround"
+   ],
+   "wmin": null,
+   "wmax": null,
+   "notes": "Cable park board. Soft flex, presses and slides rails. Red."
+  },
+  {
+   "id": "b5",
+   "type": "board",
+   "brand": "Hyperlite",
+   "model": "Union",
+   "size": "",
+   "price": "",
+   "stock": "in",
+   "skill": [
+    "features",
+    "advanced"
+   ],
+   "terrain": [
+    "cable"
+   ],
+   "style": [
+    "park"
+   ],
+   "wmin": null,
+   "wmax": null,
+   "notes": "Park board for rails and kickers. Wood-look zigzag graphic."
+  },
+  {
+   "id": "b6",
+   "type": "board",
+   "brand": "Hyperlite",
+   "model": "Freepress",
+   "size": "",
+   "price": 399.99,
+   "stock": "in",
+   "skill": [
+    "features",
+    "advanced"
+   ],
+   "terrain": [
+    "cable"
+   ],
+   "style": [
+    "park"
+   ],
+   "wmin": null,
+   "wmax": null,
+   "notes": "Flexy cable/park board. On sale (was $579.99)."
+  },
+  {
+   "id": "b7",
+   "type": "board",
+   "brand": "Hyperlite",
+   "model": "Murray",
+   "size": "",
+   "price": "",
+   "stock": "in",
+   "skill": [
+    "basics",
+    "features",
+    "advanced"
+   ],
+   "terrain": [
+    "boat",
+    "cable"
+   ],
+   "style": [
+    "allround",
+    "air"
+   ],
+   "wmin": null,
+   "wmax": null,
+   "notes": "Shaun Murray pro model. Does a bit of everything, great behind the boat."
+  },
+  {
+   "id": "b8",
+   "type": "board",
+   "brand": "Hyperlite",
+   "model": "Burress Signature",
+   "size": "",
+   "price": 399.99,
+   "stock": "in",
+   "skill": [
+    "advanced"
+   ],
+   "terrain": [
+    "boat"
+   ],
+   "style": [
+    "air"
+   ],
+   "wmin": null,
+   "wmax": null,
+   "notes": "Graeme Burress pro boat board. Big pop. On sale (was $619.99)."
+  },
+  {
+   "id": "b9",
+   "type": "board",
+   "brand": "Hyperlite",
+   "model": "Women's board (daisy graphic)",
+   "size": "",
+   "price": "",
+   "stock": "in",
+   "skill": [
+    "new",
+    "basics"
+   ],
+   "terrain": [
+    "boat",
+    "cable"
+   ],
+   "style": [
+    "allround"
+   ],
+   "wmin": null,
+   "wmax": null,
+   "notes": "Women's all-round board. Purple/daisy graphic."
+  },
+  {
+   "id": "b10",
+   "type": "board",
+   "brand": "Hyperlite",
+   "model": "Kids / women's package (splatter)",
+   "size": "",
+   "price": "",
+   "stock": "in",
+   "skill": [
+    "new",
+    "basics"
+   ],
+   "terrain": [
+    "boat",
+    "cable"
+   ],
+   "style": [
+    "allround"
+   ],
+   "wmin": null,
+   "wmax": null,
+   "notes": "White splatter board with bindings mounted. Ready to ride."
+  },
+  {
+   "id": "k1",
+   "type": "bindings",
+   "brand": "Hyperlite",
+   "model": "Zero",
+   "size": "",
+   "price": "",
+   "stock": "in",
+   "skill": [
+    "new",
+    "basics"
+   ],
+   "terrain": [
+    "boat",
+    "cable"
+   ],
+   "style": [
+    "allround"
+   ],
+   "notes": "Comfortable, easy to get into. White/grey."
+  },
+  {
+   "id": "k2",
+   "type": "bindings",
+   "brand": "Hyperlite",
+   "model": "Remix / Formula (open toe)",
+   "size": "",
+   "price": "",
+   "stock": "in",
+   "skill": [
+    "new",
+    "basics",
+    "features"
+   ],
+   "terrain": [
+    "boat",
+    "cable"
+   ],
+   "style": [
+    "allround",
+    "park"
+   ],
+   "notes": "Open-toe, fits a range of foot sizes. Good first boot."
+  },
+  {
+   "id": "k3",
+   "type": "bindings",
+   "brand": "Hyperlite",
+   "model": "Team X",
+   "size": "",
+   "price": "",
+   "stock": "in",
+   "skill": [
+    "features",
+    "advanced"
+   ],
+   "terrain": [
+    "boat",
+    "cable"
+   ],
+   "style": [
+    "park",
+    "air"
+   ],
+   "notes": "Stiffer, locked-in feel for riders hitting features."
+  },
+  {
+   "id": "k4",
+   "type": "bindings",
+   "brand": "Hyperlite",
+   "model": "System binding",
+   "size": "",
+   "price": "",
+   "stock": "in",
+   "skill": [
+    "basics",
+    "features",
+    "advanced"
+   ],
+   "terrain": [
+    "boat",
+    "cable"
+   ],
+   "style": [
+    "allround",
+    "air"
+   ],
+   "notes": "Only fits System-compatible boards. Ask staff."
+  },
+  {
+   "type": "board",
+   "brand": "Hyperlite",
+   "model": "Impulse",
+   "size": "143",
+   "wmin": "",
+   "wmax": "",
+   "price": "580",
+   "stock": "order",
+   "skill": [
+    "new",
+    "basics",
+    "features"
+   ],
+   "terrain": [
+    "cable",
+    "boat"
+   ],
+   "style": [
+    "allround",
+    "park"
+   ],
+   "notes": "Soft, forgiving cable board with a smooth continuous rocker. Easy carving and soft landings.",
+   "source": "hyperlite-catalog",
+   "verify": true
+  },
+  {
+   "type": "board",
+   "brand": "Hyperlite",
+   "model": "Impulse",
+   "size": "147",
+   "wmin": "",
+   "wmax": "",
+   "price": "580",
+   "stock": "order",
+   "skill": [
+    "new",
+    "basics",
+    "features"
+   ],
+   "terrain": [
+    "cable",
+    "boat"
+   ],
+   "style": [
+    "allround",
+    "park"
+   ],
+   "notes": "Soft, forgiving cable board with a smooth continuous rocker. Easy carving and soft landings.",
+   "source": "hyperlite-catalog",
+   "verify": true
+  },
+  {
+   "type": "board",
+   "brand": "Hyperlite",
+   "model": "Impulse",
+   "size": "151",
+   "wmin": "",
+   "wmax": "",
+   "price": "580",
+   "stock": "order",
+   "skill": [
+    "new",
+    "basics",
+    "features"
+   ],
+   "terrain": [
+    "cable",
+    "boat"
+   ],
+   "style": [
+    "allround",
+    "park"
+   ],
+   "notes": "Soft, forgiving cable board with a smooth continuous rocker. Easy carving and soft landings.",
+   "source": "hyperlite-catalog",
+   "verify": true
+  },
+  {
+   "type": "board",
+   "brand": "Hyperlite",
+   "model": "ATV",
+   "size": "143",
+   "wmin": 135,
+   "wmax": 180,
+   "price": "560",
+   "stock": "order",
+   "skill": [
+    "new",
+    "basics",
+    "features"
+   ],
+   "terrain": [
+    "cable",
+    "boat"
+   ],
+   "style": [
+    "allround"
+   ],
+   "notes": "All-terrain board with a soft, surfy feel. Works at the cable or behind the boat.",
+   "source": "hyperlite-catalog",
+   "verify": false
+  },
+  {
+   "type": "board",
+   "brand": "Hyperlite",
+   "model": "ATV",
+   "size": "148",
+   "wmin": 160,
+   "wmax": 200,
+   "price": "560",
+   "stock": "order",
+   "skill": [
+    "new",
+    "basics",
+    "features"
+   ],
+   "terrain": [
+    "cable",
+    "boat"
+   ],
+   "style": [
+    "allround"
+   ],
+   "notes": "All-terrain board with a soft, surfy feel. Works at the cable or behind the boat.",
+   "source": "hyperlite-catalog",
+   "verify": false
+  },
+  {
+   "type": "board",
+   "brand": "Hyperlite",
+   "model": "ATV",
+   "size": "153",
+   "wmin": 185,
+   "wmax": 260,
+   "price": "560",
+   "stock": "order",
+   "skill": [
+    "new",
+    "basics",
+    "features"
+   ],
+   "terrain": [
+    "cable",
+    "boat"
+   ],
+   "style": [
+    "allround"
+   ],
+   "notes": "All-terrain board with a soft, surfy feel. Works at the cable or behind the boat.",
+   "source": "hyperlite-catalog",
+   "verify": false
+  },
+  {
+   "type": "board",
+   "brand": "Hyperlite",
+   "model": "Freepress",
+   "size": "145",
+   "wmin": 120,
+   "wmax": 150,
+   "price": "705",
+   "stock": "order",
+   "skill": [
+    "basics",
+    "features",
+    "advanced"
+   ],
+   "terrain": [
+    "cable"
+   ],
+   "style": [
+    "park"
+   ],
+   "notes": "JB O'Neill's pro model. One of Hyperlite's most flexible shapes, lively pop off features.",
+   "source": "hyperlite-catalog",
+   "verify": false
+  },
+  {
+   "type": "board",
+   "brand": "Hyperlite",
+   "model": "Freepress",
+   "size": "148",
+   "wmin": 140,
+   "wmax": 180,
+   "price": "705",
+   "stock": "order",
+   "skill": [
+    "basics",
+    "features",
+    "advanced"
+   ],
+   "terrain": [
+    "cable"
+   ],
+   "style": [
+    "park"
+   ],
+   "notes": "JB O'Neill's pro model. One of Hyperlite's most flexible shapes, lively pop off features.",
+   "source": "hyperlite-catalog",
+   "verify": false
+  },
+  {
+   "type": "board",
+   "brand": "Hyperlite",
+   "model": "Freepress",
+   "size": "151",
+   "wmin": "",
+   "wmax": "",
+   "price": "705",
+   "stock": "order",
+   "skill": [
+    "basics",
+    "features",
+    "advanced"
+   ],
+   "terrain": [
+    "cable"
+   ],
+   "style": [
+    "park"
+   ],
+   "notes": "JB O'Neill's pro model. One of Hyperlite's most flexible shapes, lively pop off features.",
+   "source": "hyperlite-catalog",
+   "verify": true
+  },
+  {
+   "type": "board",
+   "brand": "Hyperlite",
+   "model": "Bloodline",
+   "size": "147",
+   "wmin": 120,
+   "wmax": 150,
+   "price": "735",
+   "stock": "order",
+   "skill": [
+    "features",
+    "advanced"
+   ],
+   "terrain": [
+    "cable"
+   ],
+   "style": [
+    "park"
+   ],
+   "notes": "Ryan and Liam Peacock's pro model. Built for presses and style on rails.",
+   "source": "hyperlite-catalog",
+   "verify": false
+  },
+  {
+   "type": "board",
+   "brand": "Hyperlite",
+   "model": "Bloodline",
+   "size": "151",
+   "wmin": 140,
+   "wmax": 180,
+   "price": "735",
+   "stock": "order",
+   "skill": [
+    "features",
+    "advanced"
+   ],
+   "terrain": [
+    "cable"
+   ],
+   "style": [
+    "park"
+   ],
+   "notes": "Ryan and Liam Peacock's pro model. Built for presses and style on rails.",
+   "source": "hyperlite-catalog",
+   "verify": false
+  },
+  {
+   "type": "board",
+   "brand": "Hyperlite",
+   "model": "Bloodline",
+   "size": "155",
+   "wmin": 170,
+   "wmax": 260,
+   "price": "735",
+   "stock": "order",
+   "skill": [
+    "features",
+    "advanced"
+   ],
+   "terrain": [
+    "cable"
+   ],
+   "style": [
+    "park"
+   ],
+   "notes": "Ryan and Liam Peacock's pro model. Built for presses and style on rails.",
+   "source": "hyperlite-catalog",
+   "verify": false
+  },
+  {
+   "type": "board",
+   "brand": "Hyperlite",
+   "model": "Guara",
+   "size": "147",
+   "wmin": 155,
+   "wmax": 200,
+   "price": "735",
+   "stock": "order",
+   "skill": [
+    "features",
+    "advanced"
+   ],
+   "terrain": [
+    "cable"
+   ],
+   "style": [],
+   "notes": "Pro-level cable board in bigger sizes.",
+   "source": "hyperlite-catalog",
+   "verify": true
+  },
+  {
+   "type": "board",
+   "brand": "Hyperlite",
+   "model": "Guara",
+   "size": "150",
+   "wmin": 175,
+   "wmax": 215,
+   "price": "735",
+   "stock": "order",
+   "skill": [
+    "features",
+    "advanced"
+   ],
+   "terrain": [
+    "cable"
+   ],
+   "style": [],
+   "notes": "Pro-level cable board in bigger sizes.",
+   "source": "hyperlite-catalog",
+   "verify": true
+  },
+  {
+   "type": "board",
+   "brand": "Hyperlite",
+   "model": "Guara",
+   "size": "153",
+   "wmin": 190,
+   "wmax": 260,
+   "price": "735",
+   "stock": "order",
+   "skill": [
+    "features",
+    "advanced"
+   ],
+   "terrain": [
+    "cable"
+   ],
+   "style": [],
+   "notes": "Pro-level cable board in bigger sizes.",
+   "source": "hyperlite-catalog",
+   "verify": true
+  },
+  {
+   "type": "board",
+   "brand": "Hyperlite",
+   "model": "Aries",
+   "size": "142",
+   "wmin": 130,
+   "wmax": 170,
+   "price": "665",
+   "stock": "order",
+   "skill": [],
+   "terrain": [
+    "cable"
+   ],
+   "style": [],
+   "notes": "Women's cable board.",
+   "source": "hyperlite-catalog",
+   "verify": true
+  },
+  {
+   "type": "board",
+   "brand": "Hyperlite",
+   "model": "Aries",
+   "size": "146",
+   "wmin": 150,
+   "wmax": 210,
+   "price": "665",
+   "stock": "order",
+   "skill": [],
+   "terrain": [
+    "cable"
+   ],
+   "style": [],
+   "notes": "Women's cable board.",
+   "source": "hyperlite-catalog",
+   "verify": true
+  }
+ ],
+ "faq": [
+  {
+   "id": "size",
+   "q": "What size board do I need?",
+   "a": ""
+  },
+  {
+   "id": "demo",
+   "q": "Can I try a board before I buy?",
+   "a": ""
+  },
+  {
+   "id": "order",
+   "q": "Can you order a size or model you don't have?",
+   "a": ""
+  },
+  {
+   "id": "mount",
+   "q": "Do you mount the bindings for me?",
+   "a": ""
+  },
+  {
+   "id": "cableboat",
+   "q": "Can one board do cable and boat?",
+   "a": ""
+  },
+  {
+   "id": "first",
+   "q": "What does a first-timer actually need to buy?",
+   "a": ""
+  },
+  {
+   "id": "returns",
+   "q": "What if it doesn't work out?",
+   "a": ""
+  },
+  {
+   "id": "pass",
+   "q": "Do season pass holders get a discount?",
+   "a": ""
+  }
+ ]
+}

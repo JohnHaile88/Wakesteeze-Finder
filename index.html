@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>OWC Pro Shop — Board Finder</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;800&display=swap" rel="stylesheet">
+<script>
+/* ===== SETUP: paste your Google Analytics measurement ID here (looks like G-ABC123XYZ) ===== */
+window.GA_ID = "G-PRJZQ4ZZTC";
+/* ========================================================================================== */
+if (window.GA_ID) {
+  var s=document.createElement('script'); s.async=true;
+  s.src='https://www.googletagmanager.com/gtag/js?id='+window.GA_ID;
+  document.head.appendChild(s);
+  window.dataLayer=window.dataLayer||[];
+  window.gtag=function(){dataLayer.push(arguments);};
+  gtag('js',new Date()); gtag('config',window.GA_ID);
+}
+</script>
+<style>
+:root{
+  --bg:#f5f7f4; --card:#ffffff; --ink:#11243b; --muted:#5a6b7c; --line:#d9e0e4;
+  --accent:#177f7b; --accent-ink:#ffffff; --order:#b96f14; --order-bg:#fbf1e1; --ok-bg:#e3f2ef;
+  --shadow:0 1px 0 rgba(17,36,59,.06);
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0f1a25; --card:#172433; --ink:#eef3f6; --muted:#9fb0bf; --line:#2a3a4b;
+    --accent:#2fb3ad; --accent-ink:#06201f; --order:#e6a04a; --order-bg:#33270f; --ok-bg:#12332f;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0f1a25; --card:#172433; --ink:#eef3f6; --muted:#9fb0bf; --line:#2a3a4b;
+  --accent:#2fb3ad; --accent-ink:#06201f; --order:#e6a04a; --order-bg:#33270f; --ok-bg:#12332f;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Barlow,"Helvetica Neue",Arial,sans-serif;font-size:17px;line-height:1.4;-webkit-font-smoothing:antialiased}
+.wrap{max-width:560px;margin:0 auto;padding:20px 18px 48px}
+header{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:22px}
+header .shop{font-weight:800;font-size:15px;letter-spacing:.02em}
+header .sub{color:var(--muted);font-size:14px}
+h1{font-size:34px;line-height:1.05;font-weight:800;margin:0 0 6px;letter-spacing:-.01em}
+h2{font-size:22px;line-height:1.15;font-weight:800;margin:0 0 14px}
+p{margin:0 0 12px}
+.lead{color:var(--muted);font-size:17px;margin-bottom:24px}
+button{font:inherit;cursor:pointer}
+.btn{display:block;width:100%;border:0;border-radius:12px;padding:16px 18px;background:var(--accent);color:var(--accent-ink);font-weight:700;font-size:18px}
+.btn.secondary{background:transparent;color:var(--ink);border:1.5px solid var(--line);font-weight:600}
+.btn.small{width:auto;display:inline-block;padding:9px 14px;font-size:15px;border-radius:10px}
+.opts{display:grid;gap:10px;margin-bottom:22px}
+.opt{text-align:left;border:1.5px solid var(--line);background:var(--card);color:var(--ink);border-radius:12px;padding:15px 16px;font-size:18px;font-weight:600;box-shadow:var(--shadow)}
+.opt small{display:block;font-weight:400;color:var(--muted);font-size:15px;margin-top:2px}
+.opt:active,.opt:focus-visible{border-color:var(--accent);outline:none}
+.progress{display:flex;gap:5px;margin:0 0 22px}
+.progress i{flex:1;height:4px;border-radius:2px;background:var(--line)}
+.progress i.on{background:var(--accent)}
+.back{background:none;border:0;color:var(--muted);padding:0;font-size:15px;margin-bottom:10px}
+.card{background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:16px;margin-bottom:14px;box-shadow:var(--shadow)}
+.card.top{border-color:var(--accent);border-width:2px}
+.rank{font-size:13px;color:var(--muted);margin-bottom:4px}
+.model{font-size:22px;font-weight:800;line-height:1.1}
+.spec{color:var(--muted);font-size:15px;margin:4px 0 10px}
+.price{font-weight:800;font-size:19px}
+.tag{display:inline-block;border-radius:8px;padding:4px 9px;font-size:14px;font-weight:600;margin-top:8px}
+.tag.ok{background:var(--ok-bg);color:var(--accent)}
+.tag.order{background:var(--order-bg);color:var(--order)}
+.why{margin:10px 0 0;padding-left:18px;font-size:15px;color:var(--muted)}
+.why li{margin:2px 0}
+.counter{margin-top:22px;padding:16px;border-radius:14px;background:var(--ok-bg);font-weight:600}
+.note{color:var(--muted);font-size:15px}
+footer{margin-top:40px;color:var(--muted);font-size:14px;display:flex;justify-content:space-between;align-items:center;gap:10px}
+footer a,footer button{color:var(--muted);background:none;border:0;padding:0;font:inherit;text-decoration:underline}
+.hidden{display:none !important}
+/* staff editor */
+.banner{background:var(--order-bg);color:var(--order);border-radius:10px;padding:10px 12px;font-size:15px;font-weight:600;margin-bottom:14px}
+.status{font-size:15px;color:var(--muted);min-height:20px;margin:8px 0}
+.row{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 0;border-bottom:1px solid var(--line)}
+.row .m{font-weight:700}
+.row .s{color:var(--muted);font-size:14px}
+.row button{border:1.5px solid var(--line);background:var(--card);color:var(--ink);border-radius:8px;padding:6px 10px;font-size:14px}
+form label{display:block;font-size:14px;color:var(--muted);margin:10px 0 4px}
+form input,form select,form textarea{width:100%;font:inherit;padding:10px;border:1.5px solid var(--line);border-radius:10px;background:var(--card);color:var(--ink)}
+form textarea{min-height:120px;font-family:ui-monospace,Menlo,monospace;font-size:13px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.checks{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+.checks label{display:flex;align-items:center;gap:6px;margin:0;border:1.5px solid var(--line);border-radius:8px;padding:6px 10px;color:var(--ink);font-size:15px}
+.checks input{width:auto}
+.actions{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}
+.actions .btn{width:auto;flex:1}
+details summary{cursor:pointer;font-weight:600;margin:14px 0 8px}
+@media (prefers-reduced-motion:no-preference){.opt,.btn{transition:transform .08s}.opt:active,.btn:active{transform:scale(.99)}}
+.flag{color:var(--order);font-weight:600}
+.colorrow{display:flex;align-items:center;gap:10px}
+.colorrow input[type=color]{width:56px;height:40px;padding:2px;border-radius:10px}
+.opt:focus-visible,.btn:focus-visible,.back:focus-visible,footer button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+.faq{margin-top:28px}
+.faq h2{margin-bottom:10px}
+.chip{display:block;width:100%;text-align:left;border:1.5px solid var(--line);background:var(--card);color:var(--ink);border-radius:12px;padding:12px 14px;font-size:16px;font-weight:600;margin-bottom:8px}
+.chip[aria-expanded="true"]{border-color:var(--accent)}
+.ans{font-weight:400;color:var(--muted);font-size:15px;margin-top:6px}
+#dbg{position:fixed;left:0;right:0;bottom:0;max-height:38vh;overflow:auto;background:#000;color:#8f8;font:12px/1.35 ui-monospace,Menlo,monospace;padding:8px 10px calc(8px + env(safe-area-inset-bottom,0px));z-index:9}
+footer a{color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="shop" id="shopName">OWC Pro Shop</div>
+    <div class="sub">Board finder</div>
+  </header>
+  <main id="app"><p class="note">Loading the rack…</p></main>
+  <footer>
+    <span>Ride Path, built by <a href="https://wakesteeze.com">Wakesteeze</a></span>
+  </footer>
+</div>
+<!-- Fallback inventory, used only if inventory.json can't be loaded -->
+<script type="application/json" id="fallback-data">{"shop": "OWC Pro Shop", "park": "OWC", "supplier": "Hyperlite", "accent": "", "sample": true, "items": [{"id": "b1", "type": "board", "brand": "Hyperlite", "model": "Motive", "size": "", "price": "", "stock": "in", "skill": ["new", "basics"], "terrain": ["boat", "cable"], "style": ["allround"], "wmin": null, "wmax": null, "notes": "Easy, forgiving first board. Black/white with red stripe, comes as a package with bindings."}, {"id": "b2", "type": "board", "brand": "Hyperlite", "model": "Motive", "size": "", "price": "", "stock": "in", "skill": ["new", "basics"], "terrain": ["boat", "cable"], "style": ["allround"], "wmin": null, "wmax": null, "notes": "Easy, forgiving first board. Black/white/blue colorway."}, {"id": "b3", "type": "board", "brand": "Hyperlite", "model": "Frenzy", "size": "", "price": 449.99, "stock": "in", "skill": ["basics", "features", "advanced"], "terrain": ["cable"], "style": ["park", "allround"], "wmin": null, "wmax": null, "notes": "Cable park board. Soft flex, presses and slides rails. Yellow."}, {"id": "b4", "type": "board", "brand": "Hyperlite", "model": "Frenzy", "size": "", "price": 449.99, "stock": "in", "skill": ["basics", "features", "advanced"], "terrain": ["cable"], "style": ["park", "allround"], "wmin": null, "wmax": null, "notes": "Cable park board. Soft flex, presses and slides rails. Red."}, {"id": "b5", "type": "board", "brand": "Hyperlite", "model": "Union", "size": "", "price": "", "stock": "in", "skill": ["features", "advanced"], "terrain": ["cable"], "style": ["park"], "wmin": null, "wmax": null, "notes": "Park board for rails and kickers. Wood-look zigzag graphic."}, {"id": "b6", "type": "board", "brand": "Hyperlite", "model": "Freepress", "size": "", "price": 399.99, "stock": "in", "skill": ["features", "advanced"], "terrain": ["cable"], "style": ["park"], "wmin": null, "wmax": null, "notes": "Flexy cable/park board. On sale (was $579.99)."}, {"id": "b7", "type": "board", "brand": "Hyperlite", "model": "Murray", "size": "", "price": "", "stock": "in", "skill": ["basics", "features", "advanced"], "terrain": ["boat", "cable"], "style": ["allround", "air"], "wmin": null, "wmax": null, "notes": "Shaun Murray pro model. Does a bit of everything, great behind the boat."}, {"id": "b8", "type": "board", "brand": "Hyperlite", "model": "Burress Signature", "size": "", "price": 399.99, "stock": "in", "skill": ["advanced"], "terrain": ["boat"], "style": ["air"], "wmin": null, "wmax": null, "notes": "Graeme Burress pro boat board. Big pop. On sale (was $619.99)."}, {"id": "b9", "type": "board", "brand": "Hyperlite", "model": "Women's board (daisy graphic)", "size": "", "price": "", "stock": "in", "skill": ["new", "basics"], "terrain": ["boat", "cable"], "style": ["allround"], "wmin": null, "wmax": null, "notes": "Women's all-round board. Purple/daisy graphic."}, {"id": "b10", "type": "board", "brand": "Hyperlite", "model": "Kids / women's package (splatter)", "size": "", "price": "", "stock": "in", "skill": ["new", "basics"], "terrain": ["boat", "cable"], "style": ["allround"], "wmin": null, "wmax": null, "notes": "White splatter board with bindings mounted. Ready to ride."}, {"id": "k1", "type": "bindings", "brand": "Hyperlite", "model": "Zero", "size": "", "price": "", "stock": "in", "skill": ["new", "basics"], "terrain": ["boat", "cable"], "style": ["allround"], "notes": "Comfortable, easy to get into. White/grey."}, {"id": "k2", "type": "bindings", "brand": "Hyperlite", "model": "Remix / Formula (open toe)", "size": "", "price": "", "stock": "in", "skill": ["new", "basics", "features"], "terrain": ["boat", "cable"], "style": ["allround", "park"], "notes": "Open-toe, fits a range of foot sizes. Good first boot."}, {"id": "k3", "type": "bindings", "brand": "Hyperlite", "model": "Team X", "size": "", "price": "", "stock": "in", "skill": ["features", "advanced"], "terrain": ["boat", "cable"], "style": ["park", "air"], "notes": "Stiffer, locked-in feel for riders hitting features."}, {"id": "k4", "type": "bindings", "brand": "Hyperlite", "model": "System binding", "size": "", "price": "", "stock": "in", "skill": ["basics", "features", "advanced"], "terrain": ["boat", "cable"], "style": ["allround", "air"], "notes": "Only fits System-compatible boards. Ask staff."}, {"type": "board", "brand": "Hyperlite", "model": "Impulse", "size": "143", "wmin": "", "wmax": "", "price": "580", "stock": "order", "skill": ["new", "basics", "features"], "terrain": ["cable", "boat"], "style": ["allround", "park"], "notes": "Soft, forgiving cable board with a smooth continuous rocker. Easy carving and soft landings.", "source": "hyperlite-catalog", "verify": true}, {"type": "board", "brand": "Hyperlite", "model": "Impulse", "size": "147", "wmin": "", "wmax": "", "price": "580", "stock": "order", "skill": ["new", "basics", "features"], "terrain": ["cable", "boat"], "style": ["allround", "park"], "notes": "Soft, forgiving cable board with a smooth continuous rocker. Easy carving and soft landings.", "source": "hyperlite-catalog", "verify": true}, {"type": "board", "brand": "Hyperlite", "model": "Impulse", "size": "151", "wmin": "", "wmax": "", "price": "580", "stock": "order", "skill": ["new", "basics", "features"], "terrain": ["cable", "boat"], "style": ["allround", "park"], "notes": "Soft, forgiving cable board with a smooth continuous rocker. Easy carving and soft landings.", "source": "hyperlite-catalog", "verify": true}, {"type": "board", "brand": "Hyperlite", "model": "ATV", "size": "143", "wmin": 135, "wmax": 180, "price": "560", "stock": "order", "skill": ["new", "basics", "features"], "terrain": ["cable", "boat"], "style": ["allround"], "notes": "All-terrain board with a soft, surfy feel. Works at the cable or behind the boat.", "source": "hyperlite-catalog", "verify": false}, {"type": "board", "brand": "Hyperlite", "model": "ATV", "size": "148", "wmin": 160, "wmax": 200, "price": "560", "stock": "order", "skill": ["new", "basics", "features"], "terrain": ["cable", "boat"], "style": ["allround"], "notes": "All-terrain board with a soft, surfy feel. Works at the cable or behind the boat.", "source": "hyperlite-catalog", "verify": false}, {"type": "board", "brand": "Hyperlite", "model": "ATV", "size": "153", "wmin": 185, "wmax": 260, "price": "560", "stock": "order", "skill": ["new", "basics", "features"], "terrain": ["cable", "boat"], "style": ["allround"], "notes": "All-terrain board with a soft, surfy feel. Works at the cable or behind the boat.", "source": "hyperlite-catalog", "verify": false}, {"type": "board", "brand": "Hyperlite", "model": "Freepress", "size": "145", "wmin": 120, "wmax": 150, "price": "705", "stock": "order", "skill": ["basics", "features", "advanced"], "terrain": ["cable"], "style": ["park"], "notes": "JB O'Neill's pro model. One of Hyperlite's most flexible shapes, lively pop off features.", "source": "hyperlite-catalog", "verify": false}, {"type": "board", "brand": "Hyperlite", "model": "Freepress", "size": "148", "wmin": 140, "wmax": 180, "price": "705", "stock": "order", "skill": ["basics", "features", "advanced"], "terrain": ["cable"], "style": ["park"], "notes": "JB O'Neill's pro model. One of Hyperlite's most flexible shapes, lively pop off features.", "source": "hyperlite-catalog", "verify": false}, {"type": "board", "brand": "Hyperlite", "model": "Freepress", "size": "151", "wmin": "", "wmax": "", "price": "705", "stock": "order", "skill": ["basics", "features", "advanced"], "terrain": ["cable"], "style": ["park"], "notes": "JB O'Neill's pro model. One of Hyperlite's most flexible shapes, lively pop off features.", "source": "hyperlite-catalog", "verify": true}, {"type": "board", "brand": "Hyperlite", "model": "Bloodline", "size": "147", "wmin": 120, "wmax": 150, "price": "735", "stock": "order", "skill": ["features", "advanced"], "terrain": ["cable"], "style": ["park"], "notes": "Ryan and Liam Peacock's pro model. Built for presses and style on rails.", "source": "hyperlite-catalog", "verify": false}, {"type": "board", "brand": "Hyperlite", "model": "Bloodline", "size": "151", "wmin": 140, "wmax": 180, "price": "735", "stock": "order", "skill": ["features", "advanced"], "terrain": ["cable"], "style": ["park"], "notes": "Ryan and Liam Peacock's pro model. Built for presses and style on rails.", "source": "hyperlite-catalog", "verify": false}, {"type": "board", "brand": "Hyperlite", "model": "Bloodline", "size": "155", "wmin": 170, "wmax": 260, "price": "735", "stock": "order", "skill": ["features", "advanced"], "terrain": ["cable"], "style": ["park"], "notes": "Ryan and Liam Peacock's pro model. Built for presses and style on rails.", "source": "hyperlite-catalog", "verify": false}, {"type": "board", "brand": "Hyperlite", "model": "Guara", "size": "147", "wmin": 155, "wmax": 200, "price": "735", "stock": "order", "skill": ["features", "advanced"], "terrain": ["cable"], "style": [], "notes": "Pro-level cable board in bigger sizes.", "source": "hyperlite-catalog", "verify": true}, {"type": "board", "brand": "Hyperlite", "model": "Guara", "size": "150", "wmin": 175, "wmax": 215, "price": "735", "stock": "order", "skill": ["features", "advanced"], "terrain": ["cable"], "style": [], "notes": "Pro-level cable board in bigger sizes.", "source": "hyperlite-catalog", "verify": true}, {"type": "board", "brand": "Hyperlite", "model": "Guara", "size": "153", "wmin": 190, "wmax": 260, "price": "735", "stock": "order", "skill": ["features", "advanced"], "terrain": ["cable"], "style": [], "notes": "Pro-level cable board in bigger sizes.", "source": "hyperlite-catalog", "verify": true}, {"type": "board", "brand": "Hyperlite", "model": "Aries", "size": "142", "wmin": 130, "wmax": 170, "price": "665", "stock": "order", "skill": [], "terrain": ["cable"], "style": [], "notes": "Women's cable board.", "source": "hyperlite-catalog", "verify": true}, {"type": "board", "brand": "Hyperlite", "model": "Aries", "size": "146", "wmin": 150, "wmax": 210, "price": "665", "stock": "order", "skill": [], "terrain": ["cable"], "style": [], "notes": "Women's cable board.", "source": "hyperlite-catalog", "verify": true}], "faq": [{"id": "size", "q": "What size board do I need?", "a": ""}, {"id": "demo", "q": "Can I try a board before I buy?", "a": ""}, {"id": "order", "q": "Can you order a size or model you don't have?", "a": ""}, {"id": "mount", "q": "Do you mount the bindings for me?", "a": ""}, {"id": "cableboat", "q": "Can one board do cable and boat?", "a": ""}, {"id": "first", "q": "What does a first-timer actually need to buy?", "a": ""}, {"id": "returns", "q": "What if it doesn't work out?", "a": ""}, {"id": "pass", "q": "Do season pass holders get a discount?", "a": ""}]}</script>
+<script>
+(function(){
+  const app=document.getElementById('app');
+  const params=new URLSearchParams(location.search);
+  const DEBUG=params.has('debug');
+  let DATA, S;
+
+  /* ---------- tracking ---------- */
+  let dbgEl=null;
+  function track(name,p){
+    p=Object.assign({shop:(S&&S.shop)||''},p||{});
+    if(window.gtag) gtag('event',name,p);
+    console.log('[track]',name,JSON.stringify(p));
+    if(DEBUG){
+      if(!dbgEl){dbgEl=document.createElement('div');dbgEl.id='dbg';document.body.appendChild(dbgEl);}
+      const line=document.createElement('div');
+      line.textContent=(window.GA_ID?'':'(no GA_ID) ')+name+' '+JSON.stringify(p);
+      dbgEl.prepend(line);
+    }
+  }
+
+  const Q=[
+    {key:'skill',q:'Where are you at right now?',opts:[
+      ['new','Never ridden, or just a few tries'],
+      ['basics','Riding, carving, crossing the wake or cable'],
+      ['features','Hitting rails and kickers'],
+      ['advanced','Inverts, spins, big features']]},
+    {key:'terrain',q:'Where will you ride most?',opts:[
+      ['cable','Cable park',''],
+      ['boat','Behind a boat'],
+      ['both','Both about equally']]},
+    {key:'style',q:'What do you want the board to be good at?',opts:[
+      ['allround','A bit of everything'],
+      ['park','Rails and features'],
+      ['air','Air off the kicker or wake']]},
+    {key:'weight',q:'About how much do you weigh?',opts:[
+      ['90','Under 110 lb'],['125','110–140 lb'],['155','140–170 lb'],['185','170–200 lb'],['215','200 lb and up']]}
+  ];
+  const SKILL_ORDER=['new','basics','features','advanced'];
+  let step=0,answers={},runStarted=false;
+
+  function esc(s){return String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
+  function lum(hex){const n=parseInt(hex.slice(1),16);const ch=[n>>16&255,n>>8&255,n&255].map(v=>{v/=255;return v<=.03928?v/12.92:Math.pow((v+.055)/1.055,2.4)});return .2126*ch[0]+.7152*ch[1]+.0722*ch[2];}
+  const has=a=>Array.isArray(a)&&a.length>0;
+
+  function applyShop(){
+    const name=S.shop||'Pro Shop';
+    document.getElementById('shopName').textContent=name;
+    document.title=name+' — Board finder';
+    Q[1].opts[0][2]=S.park?`Here at ${S.park} or another park`:'At a cable park';
+    const r=document.documentElement.style;
+    if(/^#[0-9a-f]{6}$/i.test(S.accent||'')){
+      r.setProperty('--accent',S.accent);
+      r.setProperty('--accent-ink',lum(S.accent)>.45?'#0b1a1a':'#ffffff');
+      r.setProperty('--ok-bg',`color-mix(in srgb, ${S.accent} 15%, transparent)`);
+    }
+  }
+
+  function renderIntro(){
+    const boards=DATA.items.filter(i=>i.type==='board');
+    if(!boards.length){app.innerHTML=`<h1>Board finder</h1><p class="lead">Ask anyone at the counter and they'll help you pick a board.</p>`;return;}
+    app.innerHTML=`
+      <h1>Not sure what board you need?</h1>
+      <p class="lead">Four quick questions. You'll get a short list from what's on the rack, then ask anyone at the counter to size you up.</p>
+      <button class="btn" id="start">Start</button>`;
+    document.getElementById('start').onclick=()=>{step=0;answers={};runStarted=true;track('finder_start',{source:params.get('src')||'direct'});renderQ();};
+  }
+
+  function renderQ(){
+    const q=Q[step];
+    app.innerHTML=`
+      <div class="progress">${Q.map((_,i)=>`<i class="${i<=step?'on':''}"></i>`).join('')}</div>
+      ${step>0?'<button class="back" id="back">← Back</button>':''}
+      <h2>${esc(q.q)}</h2>
+      <div class="opts">${q.opts.map(o=>`<button class="opt" data-v="${o[0]}">${esc(o[1])}${o[2]?`<small>${esc(o[2])}</small>`:''}</button>`).join('')}</div>`;
+    app.querySelectorAll('.opt').forEach(b=>b.onclick=()=>{
+      answers[q.key]=b.dataset.v;
+      track('finder_answer',{question:q.key,answer:b.dataset.v,step:step+1});
+      step++; step<Q.length?renderQ():renderResults();
+    });
+    const bk=document.getElementById('back'); if(bk) bk.onclick=()=>{track('finder_back',{from_step:step+1});step--;renderQ();};
+  }
+
+  function scoreBoard(it){
+    const why=[];let s=0;
+    const sk=answers.skill,si=SKILL_ORDER.indexOf(sk);
+    if(!has(it.skill)) s+=10;
+    else if(it.skill.includes(sk)){s+=40;why.push('Built for where you are right now');}
+    else{const near=it.skill.some(x=>Math.abs(SKILL_ORDER.indexOf(x)-si)===1);if(near){s+=15;why.push('A step up you can grow into');}else s-=30;}
+    const t=answers.terrain;
+    if(!has(it.terrain)) s+=5;
+    else if(t==='both'){if(it.terrain.includes('cable')&&it.terrain.includes('boat')){s+=25;why.push('Works behind the boat and at the park');}else s+=8;}
+    else if(it.terrain.includes(t)){s+=25;why.push(t==='cable'?'Cable-park ready':'Made for boat riding');}
+    else s-=20;
+    if(has(it.style)&&it.style.includes(answers.style)) s+=15;
+    const w=+answers.weight;
+    if(it.wmin!=null&&it.wmax!=null&&it.wmin!==''&&it.wmax!==''){
+      if(w>=it.wmin&&w<=it.wmax){s+=25;why.push(`${it.size?it.size+' cm':'This size'} fits your weight`);}else s-=25;
+    }
+    if(it.stock==='in') s+=12; // the shop would rather sell what's on the rack
+    return {s,why};
+  }
+  const nameOf=it=>(it.brand+' '+it.model+(it.size?' '+it.size:'')).trim().slice(0,90);
+
+  function renderResults(){
+    const boards=DATA.items.filter(i=>i.type==='board').map(i=>({it:i,...scoreBoard(i)})).sort((a,b)=>b.s-a.s)
+      .filter((b,i,arr)=>arr.findIndex(x=>(x.it.brand+x.it.model)===(b.it.brand+b.it.model))===i); // one size per model
+    const good=boards.filter(b=>b.s>=40).slice(0,3);
+    const picks=good.length?good:boards.slice(0,2);
+    const si=SKILL_ORDER.indexOf(answers.skill);
+    const bindings=DATA.items.filter(i=>i.type==='bindings'&&(!has(i.skill)||i.skill.includes(answers.skill)||i.skill.some(x=>Math.abs(SKILL_ORDER.indexOf(x)-si)===1))).slice(0,3);
+    const faq=(DATA.faq||[]).filter(f=>f.q);
+
+    track('finder_complete',{
+      skill:answers.skill,terrain:answers.terrain,style:answers.style,weight_band:answers.weight,
+      match_quality:good.length?'good':'nearest_only',
+      top_pick:picks[0]?nameOf(picks[0].it):'none',
+      second_pick:picks[1]?nameOf(picks[1].it):'none',
+      picks_on_rack:picks.filter(p=>p.it.stock==='in').length,
+      picks_count:picks.length
+    });
+
+    app.innerHTML=`
+      <button class="back" id="restart">← Start over</button>
+      <h2>${good.length?'Boards to look at':'Closest matches on the rack'}</h2>
+      ${!good.length?'<p class="note">Nothing on the rack is a perfect fit for those answers. These are the nearest, and the shop can order the right size.</p>':''}
+      ${picks.map((p,i)=>card(p.it,i,p.why)).join('')}
+      ${bindings.length?`<h2 style="margin-top:26px">Bindings that pair with these</h2>${bindings.map(b=>card(b,null,[])).join('')}`:''}
+      <div class="counter">Show this screen at the counter. They'll check sizing and get you set up.</div>
+      ${faq.length?`<section class="faq"><h2>Still wondering about something?</h2>
+        ${faq.map(f=>`<button class="chip" data-f="${esc(f.id)}" aria-expanded="false">${esc(f.q)}<div class="ans hidden"></div></button>`).join('')}
+      </section>`:''}`;
+    document.getElementById('restart').onclick=()=>{track('finder_restart');renderIntro();};
+    app.querySelectorAll('.chip').forEach(b=>b.onclick=()=>{
+      const f=faq.find(x=>x.id===b.dataset.f); const ans=b.querySelector('.ans');
+      const open=b.getAttribute('aria-expanded')==='true';
+      if(!open){
+        ans.textContent=f.a?f.a:'Good question. Ask at the counter and they\'ll sort you out.';
+        track('question_tap',{question:f.id,answered:f.a?'yes':'no',skill:answers.skill,terrain:answers.terrain});
+      }
+      b.setAttribute('aria-expanded',String(!open)); ans.classList.toggle('hidden',open);
+    });
+  }
+
+  function card(it,i,why){
+    const order=it.stock!=='in';
+    return `<div class="card ${i===0?'top':''}">
+      ${i!=null?`<div class="rank">${i===0?'Best match':i===1?'Also good':'Worth a look'}</div>`:''}
+      <div class="model">${esc(it.brand)} ${esc(it.model)}</div>
+      <div class="spec">${it.size?esc(it.type==='board'?it.size+' cm':'Size '+it.size)+(it.notes?' · ':''):''}${esc(it.notes||'')}</div>
+      <div class="price">${it.price?'$'+it.price:'Ask at the counter for price'}</div>
+      <span class="tag ${order?'order':'ok'}">${order?'Not on the rack today — the shop can order it'+(S.supplier?' from '+esc(S.supplier):''):'On the rack'}</span>
+      ${why&&why.length?`<ul class="why">${why.map(w=>`<li>${esc(w)}</li>`).join('')}</ul>`:''}
+    </div>`;
+  }
+
+  /* ---------- load inventory ---------- */
+  function normalize(d,fb){
+    // accepts the full file, or just the item list copied from the Staff screen
+    if(Array.isArray(d)) d=Object.assign({},fb,{items:d});
+    if(!d||!Array.isArray(d.items)) return null;
+    if(!d.faq) d.faq=fb.faq;
+    return d;
+  }
+  const FB=JSON.parse(document.getElementById('fallback-data').textContent);
+  function start(d,src){
+    DATA=d; S={shop:d.shop||'',park:d.park||'',supplier:d.supplier||'',accent:d.accent||''};
+    applyShop(); renderIntro();
+    track('finder_open',{inventory:src,boards:d.items.filter(i=>i.type==='board').length,source:params.get('src')||'direct'});
+  }
+  fetch('inventory.json',{cache:'no-store'})
+    .then(r=>{if(!r.ok) throw 0; return r.json();})
+    .then(d=>{const n=normalize(d,FB); if(!n) throw 0; start(n,'file');})
+    .catch(()=>start(FB,'fallback'));
+
+  window.addEventListener('pagehide',()=>{ if(runStarted&&step<Q.length&&step>=0) track('finder_abandon',{last_step:step+1}); });
+})();
+</script>
+</body>
+</html>
